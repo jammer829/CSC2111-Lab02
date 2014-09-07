@@ -1,5 +1,5 @@
-#if !defined WRITEFILE_H
-#define WRITEFILE_H
+#if !defined WRITE_FILE
+#define WRITE_FILE
 
 #include "Text.h"
 
@@ -12,7 +12,7 @@ class WriteFile
 		ofstream output_file;
 		bool closed;
 	public:
-		WriteFile(const char* file_name);
+		Writefile(const char* file_name);
 		~WriteFile();
 		void writeLine(String* line);
 		void close();

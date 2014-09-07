@@ -10,6 +10,7 @@ WriteFile::WriteFile(const char* file_name)
 WriteFile::~WriteFile()
 {
    close();
+   delete closed;
 }
 
 void WriteFile::close()
@@ -25,6 +26,6 @@ void WriteFile::writeLine(String* line)
 {
    if (closed!=true && line->length() > 0)
    {
-      output_file << line->getText() << endl;
+      wf->output_file << line->getText() << endl;
    }
 }
